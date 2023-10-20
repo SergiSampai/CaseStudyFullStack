@@ -1,11 +1,14 @@
 package com.example.casestudyfullstack.model;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "countries")
+@Data
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

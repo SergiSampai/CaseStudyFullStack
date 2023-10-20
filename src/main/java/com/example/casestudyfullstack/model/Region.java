@@ -1,9 +1,12 @@
 package com.example.casestudyfullstack.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "regions")
+@Data
 public class Region {
 
     @Id

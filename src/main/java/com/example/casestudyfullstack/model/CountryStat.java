@@ -1,10 +1,14 @@
 package com.example.casestudyfullstack.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "country_stats")
-public class CountryStat {
+@Data
+public class CountryStat implements Serializable {
 
     @Id
     @ManyToOne

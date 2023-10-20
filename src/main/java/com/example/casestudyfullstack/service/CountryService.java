@@ -1,18 +1,19 @@
 package com.example.casestudyfullstack.service;
 
 import com.example.casestudyfullstack.model.Country;
-import com.example.casestudyfullstack.repository.CountryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CountryService {
-    @Autowired
-    private CountryRepository countryRepository;
+public interface CountryService {
+    List<Country> getAllCountries();
 
-    public List<Country> getAllCountries() {
-        return countryRepository.findAll();
-    }
+    Country getCountryById(Long id);
+
+    void saveCountry(Country country);
+
+    void updateCountry(Long id, Country country);
+
+    void deleteCountry(Long id);
 }
